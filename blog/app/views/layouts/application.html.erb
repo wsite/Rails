@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+  	<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" > Post Overflow</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><%= link_to "Home", home_path %></li>
+      <li><%= link_to "Create Post", new_post_path %></li>
+    </ul>
+  </div>
+</nav>
+
+ <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark">
+  <%= image_tag("wc3.jpg", :alt => "FAQ") %>
+       
+      </div>
+
+
+<!--<nav class="navbar navbar-expand navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">TheBlog</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample02" aria-controls="navbarsExample02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample02">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+              <%= link_to "Home", home_path %>
+          </li>
+      </ul>
+      <ul class ="nav navbar-nav navbar-right">
+          <li class="nav-item">
+             <%= link_to "Create Post", new_post_path %>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+-->
+  	
+    <%= yield %>
+  </body>
+</html>
